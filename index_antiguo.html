@@ -1,0 +1,3713 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Monestir de Santa Maria de Ripoll</title>
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no,user-scalable=0;">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="apple-touch-icon" href="css/images/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" href="css/images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" href="css/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" href="css/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="css/images/apple-touch-icon.png">
+<link href="jquery-mobile/jquery.mobile-1.1.0.css" rel="stylesheet" type="text/css">
+<link href="custom.css" rel="stylesheet" type="text/css">
+<script src="jquery-mobile/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile.custom.min.js" type="text/javascript"></script>
+<script src="js/jquery.easing.1.3.min.js"></script> 
+<script src="js/royal-slider-8.1.min.js"></script>
+<script type="application/javascript" src="iscroll.js"></script>
+
+<script type="text/javascript">
+var myScroll;
+function loaded() {
+	setTimeout(function () {
+		myScroll = new iScroll('wrapper' ,{ zoom: true });
+	}, 100);
+}
+window.addEventListener('load', loaded, false);
+</script>
+
+
+<script type="text/javascript">
+$( '#page100' ).live( 'pageshow',function(event){
+  var player = $('audio').get(0);
+  if (player!=null) player.play();
+});
+$( '#page100' ).live('pagehide',function(event){
+  pararPlayer($('audio'));
+});
+function pararPlayer(obj) {
+	audioElement = obj.get(0);
+	if (audioElement!=null) {
+		audioElement.pause();
+		audioElement.currentTime=0;
+	}
+}
+
+//function cercar() {
+	//var x = $('#searc-basic').val();
+	//if ($.isNumeric(x)) {
+		//if (x>0 && x<41) {
+			//var pag = $('.punt'+x);
+			//alert(pag.attr('id'));
+			//$.mobile.changePage('#'+pag.attr('id'));
+			//$('input[data-type="search"]').val("");  // Borrar search despues de busqueda.
+		//} else {
+			//alert('No existeix aquest punt. Hi ha entre 1 i 40.');
+		//}
+	//} else {
+		//alert('No existeix aquest punt. Hi ha entre 1 i 40.');
+	//}
+//} 
+
+
+
+</script>
+
+</head> 
+<body> 
+
+
+
+
+<div data-role="page" id="page">
+	
+		<div class="titulo"><h1>Monestir<br />de Santa Maria<br />de Ripoll</h1></div>
+	
+    <br />
+    <div class="subtitulo">Bressol de Catalunya</div>
+    
+	<div data-role="content">	
+		<ul class="ui-listview4" data-role="listview">
+			<li class="ui-btn4"><a data-transition="slide" href="#page2">Català</a></li>
+            <li class="ui-btn4"><a data-transition="slide" href="#page2">Castellano</a></li>
+			<li class="ui-btn4"><a data-transition="slide" href="#page2">English</a></li>
+            <li class="ui-btn4"><a data-transition="slide" href="#page2">Français</a></li>
+		</ul>		
+	</div>
+</div>
+
+
+<!--    TOC     -->
+
+<div data-role="page" id="cercador">
+	<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+ 
+     <a class="ui-btn-header-cercador" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l"><small>Tornar</small></a>
+     
+
+    
+ 
+ </div>
+    
+<!-- Fin menu superior -->      
+	<div data-role="content" class="ui-content-cercador">
+
+  
+   	
+    <div data-role="fieldcontain">
+   
+		<!-- <form id="frmCercador" name="frmCercador" action="" method="post" >
+			<!-- <label for="search-basic">Cercar:</label>  -->
+			<!-- <input placeholder="Cercar..." type="search" name="search" id="searc-basic" value="" data-mini="true" />
+			<input type="button" value="Cercar" onclick="cercar()" />
+		</form> -->
+       
+</div>
+		<ul data-role="listview" class="ui-listview-cercador" data-filter="true" data-filter-placeholder="Cercar..." >
+					<li data-role="list-divider" data-divider-theme="e" data-theme="e"><a data-transition="slide" href="#menu-info-visitant">1. Informació practica pel visitant</a></li>
+					<li><a data-transition="slide" href="#horaris">1.1 Horaris</a></li>
+					<li><a data-transition="slide" href="#serveis">1.2. Serveis</a></li>
+					<li><a data-transition="slide" href="#tarifes">1.3. Tarifes / Entrades</a></li>
+                    <li><a data-transition="slide" href="#localitzacio">1.4. Localització</a></li>
+					<li><a data-transition="slide" href="#contacte">1.5. Contacte</a></li>
+                    
+                    <li data-role="list-divider" data-divider-theme="e" data-theme="e"><a data-transition="slide" href="#menu-visita-monestir">2. Visita al Monestir de Santa Maria de Ripoll</a></li>
+					<li><a data-transition="slide" href="#presentacio">2.1. Presentació</a></li>
+					<li><a data-transition="slide" href="#inicivisita">2.2 Inici de la visita</a></li>
+					<li><a data-transition="slide" href="#portalada">2.3. La Portalada</a></li>
+                    		<li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#pantocrator">2.3.1. Pantrocrator, àngels i tetramorfs</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#24-ancians">2.3.2. Els 24 ancians</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#22-beneurats">2.3.3. Els 22 beneurats</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#llibre-reis">2.3.4. El llibre dels Reis i David</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#exode">2.3.5. L'Exode</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#visions-daniel">2.3.6. Les visions de Daniel</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#cicle-pere">2.3.7. Cicle de Sant Pere</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#cicle-pau">2.3.8. Cicle de Sant Pau</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#12-mesos">2.3.9. El 12 mesos de l'any</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#caim-abel">2.3.10. Història de Caïm i Abel</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#cicle-jonas">2.3.11. Cicle de Jonàs</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#cicle-daniel">2.3.12. Cicle de Daniel</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#rei-david">2.3.13. El Rei David</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#lliura-lleis">2.3.14. Déu lliura les lleis</a></li>
+                    <li><a data-transition="slide" href="#esglesia">2.4. L'Església</a></li>
+                    		<li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#intro-esglesia">2.4.1. Introducció</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#tomba-berenguer3">2.4.2. Tomba de Ramon Berenguer III</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#tomba-berenguer4">2.4.3. Tomba de Ramon Berenguer IV</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#tomba-guifre">2.4.4. Tomba de Guifré</a></li>
+					<li><a data-transition="slide" href="#claustre">2.5. El claustre</a></li>
+                    		<li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#intro-claustre">2.5.1. Introducció</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#abat-ramon">2.5.2. L'Abat Ramon de Berga</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#capitells">2.5.3. Els Capitells</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#comtes-barcelona">2.5.4. El lloc on s'enterraven els comtes de Barcelona</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#epitafi-guifre">2.5.5. L'Epitafi de Guifré</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#troballa-guifre">2.5.6. Tomba de Guifré</a></li>
+                    <li><a data-transition="slide" href="#final">2.6. Final de la visita</a></li>
+                    
+                    
+                    <li data-role="list-divider" data-divider-theme="e" data-theme="e"><a data-transition="slide" href="#visita-centre-interpretacio">3. Visita al Centre d'interpretació</a></li>
+					<li><a data-transition="slide" href="#centre-benvinguda">3.1. Benvinguda</a></li>
+					<li><a data-transition="slide" href="#centre-espai-inmersiu">3.2. Espai Inmersiu</a></li>
+					<li><a data-transition="slide" href="#centre-la-creu">3.3. La Creu</a></li>
+                    		<li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#historia-cronologica">3.3.1. Història cronològica</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#dimensio-religiosa">3.3.2. La dimensió religiosa</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#dimensio-cultural">3.3.3. La dimensió cultural</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#dimensio-social">3.3.4. La dimensió social</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#restauracio-monestir">3.3.5. Restauració del Monestir</a></li>
+                    <li><a data-transition="slide" href="#centre-la-pell">3.4. La pell</a></li>
+                    		<li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#bressol-catalunya">3.4.1. Ripoll, bressol de Catalunya</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#testimonis">3.4.2. Testimonis, Historiadors, Politics i Religiosos</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#guifre">3.4.3. Guifré - La dimensió social</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#evolucio-territorial">3.4.4. Evolució territorial i Nassaga Comtal</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#renaixenca">3.4.5. Renaixença</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#romanic">3.4.6. Romànic</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#portalada-dimensio-cultural">3.4.7. Portalada - La dimensió cultural</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#abat-oliva">3.4.8. Abat Oliva - La dimensió religiosa</a></li>
+                            <li><a style="font-weight:normal;text-indent: 20px;" data-transition="slide" href="#catalunya-cristiana">3.4.9. La Catalunya Cristiana</a></li>
+                    <li><a data-transition="slide" href="#centre-gran-audiovisual">3.5. Gran Audiovisual</a></li>
+                    
+                    
+                    
+                    <li data-role="list-divider" data-divider-theme="e" data-theme="e"><a data-transition="slide" href="#info-aplicacio">4. Sobre l'Aplicació</a></li>
+					<li><a data-transition="slide" href="#manual-d-us">4.1. Manual d'us</a></li>
+					<li><a data-transition="slide" href="#configuracions">4.2. Configuracions</a></li>
+					<li><a data-transition="slide" href="#credits">4.3. Crèdits</a></li>
+                    <li><a data-transition="slide" href="#notes-legals">4.4. Notes legals</a></li>
+                       
+				</ul>
+              
+
+	</div>
+</div>      
+
+
+
+ <div data-role="page" id="page2">
+	<!-- TEST HEADER CON BUSCADOR -->	
+    <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Monestir de Santa Maria de Ripoll</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+    </div>
+           
+			
+		<img src="img/info_visitant2.jpg" class="imagen100" alt="" />
+		<div data-role="content">	
+			<ul class="ui-listview4" data-role="listview">
+				<li class="ui-btn4"><a data-transition="slide" href="#menu-info-visitant">1. Informació pràctica pel visitant</a></li>
+				<li class="ui-btn4"><a data-transition="slide" href="#menu-visita-monestir">2. Visita al Monestir de Ripoll</a></li>
+				<li class="ui-btn4"><a data-transition="slide" href="#visita-centre-interpretacio">3. Visita al Centre d'interpretació</a></li>
+				<li class="ui-btn4"><a data-transition="slide" href="#info-aplicacio">4. Sobre l'aplicació</a></li>
+				
+			</ul>		
+		</div>
+
+ 
+ 
+ </div>
+
+
+
+	
+	
+	
+<!-- Continguts Bloc 01 -->
+<!-- Menu Informació pel visitant -->
+
+<div data-role="page" id="menu-info-visitant" class="punt1.1">
+
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+ 
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Informació pel visitant</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+  </div>
+    
+<!-- Fin menu superior -->
+
+	<img src="img/info_visitant2.jpg" class="imagen100" alt="" />
+	<div data-role="content">	
+		<ul class="ui-listview5" data-role="listview">
+			
+			<li class="ui-btn5"><a data-transition="slide" href="#horaris">1.1. Horaris</a></li>
+			<li class="ui-btn5"><a data-transition="slide" href="#serveis">1.2. Serveis</a></li>
+            <li class="ui-btn5"><a data-transition="slide" href="#tarifes">1.3. Tarifes/Entrades</a></li>
+			<li class="ui-btn5"><a data-transition="slide" href="#localitzacio">1.4. Localització</a></li>
+			<li class="ui-btn5"><a data-transition="slide" href="#contacte">1.5. Contacte</a></li>
+		</ul>		
+	</div>
+</div>
+<!-- Espai -->
+
+<div data-role="page" id="tarifes" class="punt4">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Espai i entorn</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+    
+    </div>
+    
+<!-- Fin menu superior -->
+
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <img src="img/ripoll2.jpg"  class="imagen100" alt="" />
+			</div>
+			<strong>Tarifes/Entrades</strong><br /><hr class="lineacorta" />
+			El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.
+		</div>
+		
+	</div>
+</div>		
+
+
+
+<!-- Horaris -->
+<div data-role="page" id="horaris" class="punt2">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Horaris</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <img src="img/horaris.jpg"  class="imagen100" alt="" />
+			</div>
+			<strong>Centre d'interpretació del Monestir de Santa Maria de Ripoll</strong><br /><hr class="lineacorta" />
+			De dimarts a divendres de 10 a 19h <br />(d'abril a setembre)<br />
+            De dimarts a divendres de 10 a 13h i de 15 a 18h <br />(d'octubre a març)<br />
+            Dissabtes de 10 a 19h<br />
+            Diumenges i festius de 10 a 14h<br /><br /><br />
+            
+		</div>
+		
+	</div>
+</div>
+
+
+
+<!-- Serveis -->
+
+<div data-role="page" id="serveis" class="punt3">
+
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Serveis</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+  </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <img src="img/ripoll2.jpg"  class="imagen100" alt="" />
+			</div>
+			<strong>Serveis</strong><br /><hr class="lineacorta" />
+			El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.
+		</div>
+		
+	</div>
+</div>
+
+
+<!-- Localització -->
+
+<div data-role="page" id="localitzacio" class="punt5">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Localització</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+    </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <img src="img/ripoll2.jpg"  class="imagen100" alt="" />
+			</div>
+			<strong>Localització</strong><br /><hr class="lineacorta" />
+			El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.
+		</div>
+		
+	</div>
+</div>
+
+
+<!-- Contacte -->
+
+<div data-role="page" id="contacte" class="punt6">
+<!-- Menu superior -->
+	<div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Contacte</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+    </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <img src="img/ripoll2.jpg"  class="imagen100" alt="" />
+			</div>
+			<strong>Contacte</strong><br /><hr class="lineacorta" />
+			El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.
+		</div>
+		
+	</div>
+</div>
+<!-- Continguts Bloc 02 -->
+<!-- Visita al Monestir de Santa Maria de Ripoll -->
+
+
+<div data-role="page" id="menu-visita-monestir" class="punt7">
+<!-- Menu superior -->
+<div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+
+   <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Visita Monestir de Santa Maria de Ripoll</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+</div>
+    
+<!-- Fin menu superior -->
+
+	<img src="img/info_visitant2.jpg" class="imagen100" alt="" />
+	<div data-role="content">			
+		<ul class="ui-listview6" data-role="listview">
+			<li class="ui-btn6"><a data-transition="slide" href="#presentacio"><strong>01.</strong> Presentació</a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#inicivisita"><strong>02.</strong> Inici de la visita</a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#portalada"><strong>03.</strong> La Portalada</a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#esglesia"><strong>04.</strong> L'Esglesia</a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#claustre"><strong>05.</strong> El claustre</a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#final"><strong>06.</strong> Final de visita</a></li>
+		</ul>		
+	</div>
+</div>
+
+<!-- 01. Presentació -->
+
+
+<div data-role="page" id="presentacio" class="punt8">
+
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Presentació</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Presentació</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+
+
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+
+</div>
+</fieldset>
+</div>
+    
+		 <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>01.</strong> Presentació</small></center></a>
+		 </div>  
+        
+	
+</div>
+</div>
+  
+
+
+</div>
+
+<!-- 02. Inici de la visita -->
+
+<div data-role="page" id="inicivisita" class="punt9">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+ 
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Inici de la visita</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>El Monestir de Santa Maria de Ripoll</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+<div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>02.</strong> Inici de la visita</small></center></a>
+</div>  
+        
+		</div>
+		
+	</div>
+</div>
+
+
+<!-- 03. La Portalada  -->
+<div data-role="page" id="portalada" class="punt10">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>La Portalada</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<img src="img/portaladaalta.jpg" class="imagen100" alt="" />
+	<div data-role="content">			
+		<ul class="ui-listview3" data-role="listview">
+			<li class="ui-btn3"><a data-transition="slide" href="#la-portalada"><strong>3.1.</strong> La Portalada</a></li>
+			<li class="ui-btn3"><a data-transition="slide" href="#els-missatges"><strong>3.2.</strong> Els missatges</a></li>
+			<li class="ui-btn3"><a data-transition="slide" href="#detall-escenes"><strong>3.3.</strong> Les escenes amb més detall</a></li>
+			
+		</ul>		
+	</div>
+</div>
+
+
+
+<!-- 3.1 La Portalada  -->
+<div data-role="page" id="la-portalada" class="punt11">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>La Portalada</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+
+	
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Introducció</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.1.</strong> Introducció</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+<!-- 3.2 el missatges  -->
+<div data-role="page" id="els-missatges" class="punt12">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Els missatges</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Els missatges</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.2.</strong> Els missatges</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+<!-- 3.3 Les escenes amb mes detall  -->
+<div data-role="page" id="detall-escenes" class="punt13">
+
+   <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Les escenes amb mes detall</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+    </div>
+	<div data-role="content">			
+		<ul class="ui-listview-portalada" data-role="listview">
+			<li class="ui-btn6"><a data-transition="slide" href="#pantocrator"><img src="img/portalada_1.png" class="imagen50" alt=""><small><strong>3.3.1.</strong><br /> Pantocràtor, àngels i tetramorfs</small></a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#24-ancians"><img src="img/portalada_2.png" class="imagen50" alt=""><small><strong>3.3.2.</strong><br /> Els 24 ancians de l'apocalipsi</small></a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#22-beneurats"><img src="img/portalada_3.png" class="imagen50" alt=""><small><strong>3.3.3.</strong><br /> Els 22 benaurats</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#llibre-reis"><img src="img/portalada_4.png" class="imagen50" alt=""><small><strong>3.3.4.</strong><br /> El llibre dels Reis i David</small></a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#exode"><img src="img/portalada_5.png" class="imagen50" alt=""><small><strong>3.3.5.</strong><br /> L'exode</small></a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#visions-daniel"><img src="img/portalada_6.png" class="imagen50" alt=""><small><strong>3.3.6.</strong><br /> Les visions de Daniel</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#cicle-pere"><img src="img/portalada_7.png" class="imagen50" alt=""><small><strong>3.3.7.</strong><br /> Cicle de Sant Pere</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#cicle-pau"><img src="img/portalada_8.png" class="imagen50" alt=""><small><strong>3.3.8.</strong><br /> Cicle de Sant Pau</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#12-mesos"><img src="img/portalada_9.png" class="imagen50" alt=""><small><strong>3.3.9.</strong><br /> Els 12 mesos de l'any</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#caim-abel"><img src="img/portalada_10.png" class="imagen50" alt=""><small><strong>3.3.10.</strong><br /> Història de Caïm i Abel</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#cicle-jonas"><img src="img/portalada_11.png" class="imagen50" alt=""><small><strong>3.3.11.</strong><br /> Cicle de Jonàs</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#cicle-daniel"><img src="img/portalada_12.png" class="imagen50" alt=""><small><strong>3.3.12.</strong><br /> Cicle de Daniel</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#rei-david"><img src="img/portalada_13.png" class="imagen50" alt=""><small><strong>3.3.13.</strong><br /> El Rei David</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#lliura-lleis"><img src="img/portalada_14.png" class="imagen50" alt=""><small><strong>3.3.14.</strong><br /> Dèu lliura les lleis</small></a></li>
+			
+		</ul>		
+	</div>
+</div>
+
+
+
+
+
+<!-- 3.3.1 Pantocràtor, àngels i tetramorfs  -->
+<div data-role="page" id="pantocrator" class="punt14">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+	<a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Pantocràtor, àngels i tetramorfs</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Pantocràtor, àngels i tetramorfs</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.1.</strong> Pantocràtor, àngels i tetramorfs</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- 3.3.2 Els 24 ancians de l'apocalipsi  -->
+<div data-role="page" id="24-ancians" class="punt15">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+	<a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Els 24 ancians de l'apocalipsi</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Els 24 ancians de l'apocalipsi</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.2.</strong> Els 24 ancians de l'apocalipsi</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- 3.3.3 Els 22 benaurats  -->
+<div data-role="page" id="22-beneurats" class="punt16">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+	<a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Els 22 benaurats</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Els 22 benaurats</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.3.</strong> Els 22 benaurats</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- 3.3.4 El llibre dels Reis i David -->
+<div data-role="page" id="llibre-reis" class="punt17">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+	
+	<a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>El llibre dels Reis i David</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>El llibre dels Reis i David</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.4.</strong> El llibre dels Reis i David</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 3.3.5 L'Exode -->
+<div data-role="page" id="exode" class="punt18">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+	
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>L'exode</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>L'Exode</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.5.</strong> L'Exode</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- 3.3.6  Les visions de Daniel -->
+<div data-role="page" id="visions-daniel" class="punt19">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+	
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Les visions de Daniel</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Les visions de Daniel</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.6.</strong> Les visions de Daniel</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 3.3.7  Cicle de Sant Pere -->
+<div data-role="page" id="cicle-pere" class="punt20">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Cicle de Sant Pere</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Cicle de Sant Pere</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.7.</strong> Cicle de Sant Pere</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 3.3.8  Cicle de Sant Pau -->
+<div data-role="page" id="cicle-pau" class="punt21">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Cicle de Sant Pau</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Cicle de Sant Pau</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.8.</strong> Cicle de Sant Pau</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 3.3.9  Els 12 mesos de l'any -->
+<div data-role="page" id="12-mesos" class="punt22">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Els 12 mesos de l'any</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Els 12 mesos de l'any</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.9.</strong> Els 12 mesos de l'any</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 3.3.10  Història de Caïm i Abel -->
+<div data-role="page" id="caim-abel" class="punt23">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Història de Caïm i Abel</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Història de Caïm i Abel</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.10.</strong> Història de Caïm i Abel</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<!-- 3.3.11  Cicle de Jonàs -->
+<div data-role="page" id="cicle-jonas" class="punt24">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Cicle de Jonàs</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Cicle de Jonàs</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.11.</strong> Cicle de Jonàs</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 3.3.12  Cicle de Daniel -->
+<div data-role="page" id="cicle-daniel" class="punt25">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Cicle de Daniel</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Cicle de Daniel</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.12.</strong> Cicle de Daniel</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 3.3.13  El Rei David -->
+<div data-role="page" id="rei-david" class="punt26">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>El Rei David</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>El Rei David</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.13.</strong> El Rei David</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- 3.3.14  Déu lliura les lleis -->
+<div data-role="page" id="lliura-lleis" class="punt27">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Dèu lliura les lleis</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Déu lliura les lleis</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>3.3.14.</strong> Déu lliura les lleis</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- 04. L'Esglèsia -->
+
+<div data-role="page" id="esglesia" class="punt28">
+
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>L'Esglèsia</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<img src="img/alta.jpg" class="imagen100" alt="" />
+			<div data-role="content">			
+				<ul class="ui-listview4" data-role="listview">
+					<li class="ui-btn4"><a data-transition="slide" href="#intro-esglesia">4.1. Introducció</a></li>
+					<li class="ui-btn4"><a data-transition="slide" href="#tomba-berenguer3">4.2. Tomba de Ramon Berenguer III</a></li>
+					<li class="ui-btn4"><a data-transition="slide" href="#tomba-berenguer4">4.3. Tomba de Ramon Berenguer IV</a></li>
+					<li class="ui-btn4"><a data-transition="slide" href="#tomba-guifre">4.4. Tomba de Guifre</a></li>
+				</ul>		
+			</div>
+</div>
+
+
+
+<!-- 4.1 Introducció  -->
+<div data-role="page" id="intro-esglesia" class="punt29">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Introducció</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Introducció</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>4.1.</strong> Introducció</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- 4.2 Tomba de Ramon Berenguer III  -->
+<div data-role="page" id="tomba-berenguer3" class="punt30">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Tomba de Ramón Berenguer III</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Tomba de Ramon Berenguer III</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>4.2.</strong> Tomba de Ramon Berenguer III</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<!-- 4.3 Tomba de Ramon Berenguer IV  -->
+<div data-role="page" id="tomba-berenguer4" class="punt31">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Tomba de Ramón Berenguer IV</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Tomba de Ramon Berenguer IV</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>4.3.</strong> Tomba de Ramon Berenguer IV</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 4.4 Tomba de Guifré  -->
+<div data-role="page" id="tomba-guifre" class="punt32">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Tomba de Guifré</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Tomba de Guifré</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>4.4.</strong> Tomba de Guifré</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- 05. El claustre -->
+
+<div data-role="page" id="claustre" class="punt33">
+
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>El claustre</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<img src="img/info_visitant2.jpg" class="imagen100" alt="" />
+	<div data-role="content">			
+		<ul class="ui-listview6" data-role="listview">
+			<li class="ui-btn6"><a data-transition="slide" href="#intro-claustre">5.1. Introducció</a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#abat-ramon">5.2. L'Abat Ramon de Berga</a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#capitells">5.3. Els Capitells</a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#comtes-barcelona">5.4. El lloc on s'enterraven els comtes</a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#epitafi-guifre">5.5. L'epitafi de Guifré</a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#troballa-guifre">5.6. Troballa de la Tomba de Guifré</a></li>
+		</ul>		
+	</div>
+</div>
+
+
+
+
+<!-- 5.1 Introducció Claustre  -->
+<div data-role="page" id="intro-claustre" class="punt34">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Introducció</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Introducció</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>5.1.</strong> Introducció</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- 5.2 L'Abat Ramon de Berga  -->
+<div data-role="page" id="abat-ramon" class="punt35">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>L'Abat Ramón de Berga</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>L'Abat Ramon de Berga</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>5.2.</strong> L'Abat Ramon de Berga</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- 5.3 Els Capitelles  -->
+<div data-role="page" id="capitells" class="punt36">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Els Capitells</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Els Capitells</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>5.3.</strong> Els Capitells</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- 5.4 El lloc on s'enterraven els comtes de Barcelona  -->
+<div data-role="page" id="comtes-barcelona" class="punt37">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>El lloc on s'enterraven els comtes</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>El lloc on s'enterraven els comtes de Barcelona</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small><strong>5.4.</strong> El lloc on s'enterraven els comtes de Barcelona</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- 5.5 L'Epitafi de Guifré  -->
+<div data-role="page" id="epitafi-guifre" class="punt38">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>L'Epitafi de Guifré</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>L'Epitafi de Guifré</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>5.5. L'Epitafi de Guifré</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 5.5 Troballa de la tomba de Guifré  -->
+<div data-role="page" id="troballa-guifre" class="punt39">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Troballa de la tomba de Guifré</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Troballa de la tomba de Guifré</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>5.6. Troballa de la tomba de Guifré</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 06 Final de la Visita  -->
+<div data-role="page" id="final" class="punt40">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Final de la visita</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Final de la visita</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>6. Final de la visita</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<!-- BLOC 02.2 - Visita al Centre d'interpretació -->
+
+
+
+
+
+
+
+
+<div data-role="page" id="visita-centre-interpretacio" class="punt">
+        
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+	
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Visita al Centre d'interpretació</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+      
+ </div>
+    
+<!-- Fin menu superior -->        
+			<img src="img/ripoll1alta.jpg" class="imagen100" alt="" />
+			<div data-role="content">			
+				<ul class="ui-listview5" data-role="listview">
+					<li class="ui-btn5"><a data-transition="slide" href="#centre-benvinguda">Benvinguda</a></li>
+					<li class="ui-btn5"><a data-transition="slide" href="#centre-espai-immersiu">Espai immersiu</a></li>
+					<li class="ui-btn5"><a data-transition="slide" href="#centre-la-creu">La Creu</a></li>
+					<li class="ui-btn5"><a data-transition="slide" href="#centre-la-pell">La Pell</a></li>
+					<li class="ui-btn5"><a data-transition="slide" href="#centre-gran-audiovisual">Gran audiovisual</a></li>
+				</ul>		
+			</div>
+		</div>	
+        
+        
+        
+        
+        
+        
+        
+<!-- Bloc 02.2.1 - Visita al Centre d'interpretació - Benvinguda -->
+
+<div data-role="page" id="centre-benvinguda" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Benvinguda</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Benvinguda</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>1. Benvinguda</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+<!-- FI Bloc 02.2.1 - Visita al Centre d'interpretació - Benvinguda -->		
+
+
+
+
+
+
+	
+			<!-- Bloc 02.2.2 - Visita al Centre d'interpretació - Espai Immersiu -->
+<div data-role="page" id="centre-espai-immersiu" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Espai inmersiu</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Espai Immersiu</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>2. Espai Immersiu</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+				<!-- Bloc 02.2.3 - Visita al Centre d'interpretació - LA CREU -->
+				<div data-role="page" id="centre-la-creu" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>La Creu</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->                
+
+							
+				<div data-role="content">			
+		<ul class="ui-listview-portalada" data-role="listview">
+			<li class="ui-btn6"><a data-transition="slide" href="#historia-cronologica"><img src="img/portalada_1.png" class="imagen50" alt="">3.1. Historia cronològica</a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#dimensio-religiosa"><img src="img/portalada_2.png" class="imagen50" alt="">3.2. La dimensió religiosa</a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#dimensio-cultural"><img src="img/portalada_3.png" class="imagen50" alt="">3.3. La dimensió cultural</a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#dimensio-social"><img src="img/portalada_4.png" class="imagen50" alt="">3.4. La dimensió social </a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#restauracio-monestir"><img src="img/portalada_5.png" class="imagen50" alt="">3.5. Restauració del Monestir</a></li>
+			
+            
+			
+		</ul>		
+	</div>
+				</div>	
+               
+                
+                
+                
+                
+  
+  
+<!-- 3.1 - Historia Cronologia -->
+<div data-role="page" id="historia-cronologica" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Història cronològica</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Historia Cronològica</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>3.1. Historia cronològica</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>       
+
+
+
+
+
+
+<!-- 3.2 - La dimensió religiosa -->
+<div data-role="page" id="dimensio-religiosa" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>La dimensió religiosa</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>La dimensió religiosa</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>3.2. La dimensió religiosa</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>                
+
+
+
+
+
+
+
+<!-- 3.3 - La dimensió cultural -->
+<div data-role="page" id="dimensio-cultural" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>La dimensió cultural</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>La dimensió cultural</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>3.3. La dimensió cultural</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>       
+
+
+
+
+
+
+<!-- 3.4 - La dimensió social -->
+<div data-role="page" id="dimensio-social" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>La dimensió social</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>La dimensió social</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>3.4. La dimensió social</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>   
+
+
+
+
+
+
+
+<!-- 3.5. Restauració del Monestir -->
+<div data-role="page" id="restauracio-monestir" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Restauració del Monestir</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Restauració del Monestir</strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>3.5. Restauració del Monestir</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>                                                                                       
+                
+                
+                
+                
+                
+                
+                
+			<!-- Bloc 02.2.4 - Visita al Centre d'interpretació - LA PELL -->
+				<div data-role="page" id="centre-la-pell" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>La Pell</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->                
+
+						
+				<div data-role="content">			
+		<ul class="ui-listview-portalada" data-role="listview">
+			<li class="ui-btn6"><a data-transition="slide" href="#bressol-catalunya"><img src="img/portalada_1.png" class="imagen50" alt=""><small>4.1. Ripoll, bressol de Catalunya</small><br /><small style="font-weight:normal;">La dimensió nacional</small></a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#testimonis"><img src="img/portalada_2.png" class="imagen50" alt=""><small>4.2. Testimonis, Historiadors, Politics i Religiosos</small><br /><small style="font-weight:normal;">La dimensió nacional</small></a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#guifre"><img src="img/portalada_3.png" class="imagen50" alt=""><small>4.3. Guifré</small><br /><small style="font-weight:normal;">La dimensió social</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#evolucio-territorial"><img src="img/portalada_4.png" class="imagen50" alt=""><small>4.4. Evolució territorial i Nassaga Comtal</small><br /><small style="font-weight:normal;">La dimensió social</small></a></li>
+			<li class="ui-btn6"><a data-transition="slide" href="#renaixenca"><img src="img/portalada_5.png" class="imagen50" alt=""><small>4.4. Renaixença</small><br /><small style="font-weight:normal;">La dimensió cultural</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#romanic"><img src="img/portalada_5.png" class="imagen50" alt=""><small>4.5. Romànic</small><br /><small style="font-weight:normal;">La dimensió cultural</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#portalada-dimensio-cultural"><img src="img/portalada_5.png" class="imagen50" alt=""><small>4.6. Portalada</small><br /><small style="font-weight:normal;">La dimensió cultural</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#abat-oliva"><img src="img/portalada_5.png" class="imagen50" alt=""><small>4.7. Abat Oliva</small><br /><small style="font-weight:normal;">La dimensió religiosa</small></a></li>
+            <li class="ui-btn6"><a data-transition="slide" href="#catalunya-cristiana"><img src="img/portalada_5.png" class="imagen50" alt=""><small>4.8. La Catalunya Cristiana</small><br /><small style="font-weight:normal;">La dimensió Religiosa</small></a></li>
+			
+            
+			
+		</ul>		
+	</div>
+				</div>	
+              
+               
+                
+                
+ 
+ 
+ 
+ 
+ <!-- 4.1. Ripoll Bressol de Catalunya -->
+<div data-role="page" id="bressol-catalunya" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Ripoll, bressol de Catalunya</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Ripoll, bressol de Catalunya<br/><small>La dimensió nacional</small></strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>4.1. Ripoll, bressol de Catalunya</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>            
+
+
+
+
+
+
+
+<!-- 4.2. Testimonis, Historiadors, Politics i Religiosos -->
+<div data-role="page" id="testimonis" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Testimonis, Historiadors, Polítics i Religiosos</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Testimonis, Historiadors, Politics i Religiosos<br/><small>La dimensió nacional</small></strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>4.2. Testimonis, Historiadors, Politics i Religiosos</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- 4.3. Guifré - La dimensió social -->
+<div data-role="page" id="guifre" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Guifré. La dimensió social</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Guifré<br/><small>La dimensió social</small></strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>4.3. Guifré. La dimensió social</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<!-- 4.4. Evolució territorial i Nassaga Comtal -->
+<div data-role="page" id="evolucio-territorial" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Evolució territorial i Nassaga Comtal</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Evolució territorial i Nassaga Comtal<br/><small>La dimensió social</small></strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>4.4. Evolució territorial i Nassaga Comtal</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- 4.5.  Renaixença- La dimensio cultural -->
+<div data-role="page" id="renaixenca" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Renaixença. La dimensió cultural</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Renaixença<br/><small>La dimensió cultural</small></strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>4.5. Renaixença. La dimensió cultural</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- 4.6.  Romanic- La dimensio cultural -->
+<div data-role="page" id="romanic" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Romànic. La dimensió cultural</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Romanic<br/><small>La dimensió cultural</small></strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>4.6. Romanic. La dimensió cultural</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- 4.7.  Portalada - La dimensio cultural -->
+<div data-role="page" id="portalada-dimensio-cultural" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Portalada. La dimensió cultural</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Portalada<br/><small>La dimensió cultural</small></strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>4.7. Portalada. La dimensió cultural</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- 4.8.  Abat Oliva - La dimensió religiosa -->
+<div data-role="page" id="abat-oliva" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Abat Oliva. La dimensió religiosa</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>Abat Oliva<br/><small>La dimensió religiosa</small></strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>4.8. Abat Oliva</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!-- 4.9.  La Catalunya Cristiana - La dimensió religiosa -->
+<div data-role="page" id="catalunya-cristiana" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>La Catalunya cristiana</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <a href="#galeria1" data-transition="flip"><img src="img/horaris.jpg"  class="imagen100" alt="" /></a>
+			</div>
+			<strong>La Catalunya Cristiana<br/><small>La dimensió religiosa</small></strong><br /><hr class="lineacorta" />
+            El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.<br /><br />
+	
+<div class="ui-field-contain ui-body ui-br" data-role="fieldcontain">
+<fieldset class="ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
+  
+<div class="ui-controlgroup-controls">
+
+<div class="ui-checkbox">
+
+<label class="ui-btn ui-checkbox-off ui-corner-left ui-btn-up-c ui-check" data-role="button" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-btn-inner ui-corner-left">
+<a class="ui-link-check ui-btn-active-check" href="#planol" data-transition="slide"><small>Ubicar en el plànol</small></a>
+</span>
+</label>
+</div>
+
+<input id="checkbox-8" type="checkbox" name="checkbox-8"/>
+<label class="ui-btn ui-checkbox-off ui-corner-right ui-controlgroup-last ui-btn-up-c ui-check " for="checkbox-8" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="c">
+<span class="ui-corner-left">
+<a class="ui-link-check ui-btn-active-check"><small>Marcar com visitat</small></a>
+</span>
+</label>
+
+</div>
+</fieldset>
+</div>
+    
+ <div class="ui-btn-sound" data-role="button" data-corners="false">
+		 <a data-transition="slide" href="#page100"><center><img class="iconosonido" src="img/soundicon.png" width="18" height="18" alt=""><small>4.9. La Catalunya Cristiana</small></center></a>
+		 </div>  
+        
+		</div>
+	</div>
+</div>               
+
+
+
+
+
+
+
+<!-- 5.  GRAN AUDIOVISUAL -->
+
+
+<div data-role="page" id="centre-gran-audiovisual" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Gran audiovisual</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+    </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <img src="img/ripoll2.jpg"  class="imagen100" alt="" />
+			</div>
+			<strong>Gran Audiovisual</strong><br /><hr class="lineacorta" />
+			El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.
+		</div>
+		
+	</div>
+</div>                                                                                                                                                        
+                
+                
+                
+                
+				
+		<!-- FI Bloc 02.2 - Visita al Centre d'interpretació -->	
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        						
+
+<!-- Bloc 03 - Informació sobre l'aplicació -->
+
+
+
+
+
+		<div data-role="page" id="info-aplicacio" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Sobre l'aplicació</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+ </div>
+    
+<!-- Fin menu superior -->                 
+ 
+			<img src="img/alta.jpg" class="imagen100" alt="" />
+			<div data-role="content">			
+				<ul class="ui-listview4" data-role="listview">
+					<li class="ui-btn4"><a data-transition="slide" href="#manual-d-us">Manual d'ús</a></li>
+					<li class="ui-btn4"><a data-transition="slide" href="#configuracions">Configuracions</a></li>
+					<li class="ui-btn4"><a data-transition="slide" href="#credits">Crèdits</a></li>
+					<li class="ui-btn4"><a data-transition="slide" href="#notes-legals">Notes legals</a></li>
+				</ul>		
+			</div>
+		</div>
+        
+        
+        
+        
+        
+        
+        
+			<!-- Bloc 03 - Informació sobre l'aplicació - Manual d'us -->
+			<div data-role="page" id="manual-d-us" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Manual d'us</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+    </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <img src="img/ripoll2.jpg"  class="imagen100" alt="" />
+			</div>
+			<strong>Manual d'ús</strong><br /><hr class="lineacorta" />
+			El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.
+		</div>
+		
+	</div>
+</div>
+            
+            
+            
+            
+            
+
+
+
+
+<!-- Bloc 03 - Informació sobre l'aplicació - Configuracions -->
+			<div data-role="page" id="configuracions" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+
+    <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Configuracions</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+    </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <img src="img/ripoll2.jpg"  class="imagen100" alt="" />
+			</div>
+			<strong>Configuracions</strong><br /><hr class="lineacorta" />
+			El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.
+		</div>
+		
+	</div>
+</div>
+
+
+
+
+
+			<!-- Bloc 03 - Informació sobre l'aplicació - Crèdits -->
+			<div data-role="page" id="credits" class="punt5">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Crèdits</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+    </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <img src="img/ripoll2.jpg"  class="imagen100" alt="" />
+			</div>
+			<strong>Credits</strong><br /><hr class="lineacorta" />
+			El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.
+		</div>
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+			<!-- Bloc 03 - Informació sobre l'aplicació - Notes legals -->
+			<div data-role="page" id="notes-legals" class="punt">
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+
+
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-1" data-role="button" data-inline="true" data-theme="c" data-corners="false"><small>Notes legals</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="c" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+     
+    </div>
+    
+<!-- Fin menu superior -->
+
+	<div data-role="content">	
+		<div class="contenido">
+			<div class="img">
+			  <img src="img/ripoll2.jpg"  class="imagen100" alt="" />
+			</div>
+			<strong>Notes Legals</strong><br /><hr class="lineacorta" />
+			El monestir va ser fundat l'any 880 pel compte Guifré el Pilós. La seva missió era la de repoblar les valls del riu Ter i ampliar les seves possesions cap a la Cerdanya i Ponts. La primera consagració de l'església va tenir lloc el 20 d'abril de 888 i es va decidir dedicar l'església a l'advocació de Santa Maria.
+		</div>
+		
+	</div>
+</div>
+
+
+
+
+
+		<!-- FI Bloc 03 - Informació sobre l'aplicació -->	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Bloc 04 - AUDIO -->
+        
+        
+        
+		<div data-role="page" data-theme="a" id="page100" class="punt">
+        
+        
+<!-- Menu superior -->
+ <div data-role="controlgroup" data-type="horizontal" data-corners="false">
+ 
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-2" data-role="button" data-inline="true" data-theme="a" data-corners="false"><small>Audio - 0.1. Presentació</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="a" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+ 
+ </div>
+    
+<!-- Fin menu superior -->              
+        
+     
+			
+			<div data-role="content" style="text-align:center">
+				<br/>
+				<p>El Monestir de Santa Maria de Ripoll</p>
+				<br/>
+				<img src="img/audio-bg.jpg" alt="audio" class="imagen60"/>
+				<br/>
+				<br/>
+				<br/>
+				<audio controls="controls" class="width80">
+				  <source src="audio/test_audio_ripoll_20min_16kbps.mp3" type="audio/mp3" />
+				</audio> 
+			</div>
+		</div>	
+		<!-- FI Bloc 04 - Àudio -->
+        
+        
+ <!-- GALERIA -->    
+   
+   
+   
+<div data-role="page" id="galeria1" style="background-color:#000;">
+<!-- Menu superior -->
+<div data-role="controlgroup" data-type="horizontal" data-corners="false">
+ 
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-2" data-role="button" data-inline="true" data-theme="a" data-corners="false"><small>Galeria Monestir de Ripoll</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="a" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+ 
+</div>
+    
+<!-- Fin menu superior -->      
+	
+<script>     	
+	jQuery(document).ready(function($) {		
+		$('#banner-rotator').royalSlider({			
+	   		imageAlignCenter:true,
+	   		imageScaleMode: "fit",
+	   		slideSpacing:20,
+	   		autoScaleSlider: true,
+	   		autoScaleSliderWidth: 300,
+	   		autoScaleSliderHeight: 400,
+	    });	
+		//$('.royalSlidesContainer').delay(3000).width('auto');
+		//$('.royalSlidesContainer li').delay(3000).width('auto');
+	});
+    </script>
+    
+     <div id="main-body">		
+		<div id="slider-ajax-container" >
+			<div id="banner-rotator" class="royalSlider minimal" >    
+   				 <ul class="royalSlidesContainer">
+                     <li class="royalSlide">                     
+                        <img class="royalImage" src="img/info_visitant2.jpg" />  	
+                    </li>
+                    <li class="royalSlide"> 
+                        <img class="royalImage" src="img/ripoll1.jpg" />  	
+                    </li> 
+                    <li class="royalSlide"> 
+                        <img class="royalImage" src="img/ripoll50.jpg" />  		
+                    </li>
+                    <li class="royalSlide">          
+                       <img class="royalImage" src="img/portalada.jpg" />  	                                 	
+                    </li>
+        		</ul>
+  
+			</div>
+		</div>		
+	</div>
+    
+
+			
+	
+	
+</div>
+  
+    
+
+        
+   <!-- FI GALERIA -->	   
+   
+   
+   
+    <!-- UBICAR EN EL PLANOL -->	   
+        
+<div data-role="page" id="planol">
+	<!-- Menu superior -->
+<div data-role="controlgroup" data-type="horizontal" data-corners="false">
+ 
+     <a class="ui-btn-header1" data-rel="back" data-role="button" data-inline="true" data-theme="a" data-corners="false" data-transition="slide" data-direction="reverse" data-icon="arrow-l">&nbsp;</a>
+    <a class="ui-btn-header3-2" data-role="button" data-inline="true" data-theme="a" data-corners="false"><small>Planol Monestir de Ripoll</small></a>
+    <a class="ui-btn-header2" href="#cercador" data-role="button" data-inline="true" data-theme="a" data-corners="false" data-transition="slide" data-icon="search">&nbsp;</a>
+ 
+</div>
+    
+<!-- Fin menu superior -->      
+        	<div id="wrapper">
+
+        	<center><img style="-webkit-transform:translate3d(0,0,0);" src="img/planta.jpg" width="90%" alt="" /></center>
+        	</div>
+
+ </div>        
+        
+    <!-- FI PLANOL -->	     
+        
+        
+        
+        
+	<!-- FI CATALÀ -->	
+    
+    
+
+
+</body>
+</html>
